@@ -18,10 +18,11 @@ namespace AlturaTriangulo
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
-        {
-            // FÓRMULA: (base * altura) / 2            
+        {                        
+            //Verificar se foi digitado apenas nºs
             try
             {
+                // FÓRMULA: (base * altura) / 2
                 double resultado = double.Parse(txbBase.Text) * double.Parse(txbAltura.Text) / 2;
                 lblResultado.Text = "ÁREA: " + resultado.ToString();
                 lblResultado.ForeColor = Color.Black;
@@ -30,9 +31,7 @@ namespace AlturaTriangulo
             {
                 lblResultado.Text = "ERRO!";
                 lblResultado.ForeColor = Color.Red;
-            }
-            
-            
+            }                      
         }
     }
 }
